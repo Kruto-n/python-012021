@@ -8,6 +8,6 @@ baliky = {
 kod = input("Jaky je kod vaseho baliku?")
 if kod in baliky:
   if baliky[kod]:
-    print("Balík byl předán kurýrovi")
+    print("Balík byl předán kurýrovi.")
   else:
     print("Balík zatím nebyl předán kurýrovi")
