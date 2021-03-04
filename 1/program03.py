@@ -6,3 +6,4 @@ volnePokoje = {
 }
 kdy = int(input("Na jakou hodinu chcete zamluvit meeting room?"))
 print(volnePokoje[kdy])
+print(len(volnePokoje[kdy]))
