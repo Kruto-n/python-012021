@@ -1,5 +1,5 @@
 number = input("Na jake cislo chcete zpravu odeslat?")
-number = number.replace(" ", " ")
+number = number.replace(" ", "")
 def validate(number):
     if len(number) == 9:
         print("V poradku.")
