@@ -489,9 +489,18 @@ staty = [
     {'name': 'Zimbabwe', 'capital': 'Harare', 'region': 'Africa', 'subregion': 'Eastern Africa', 'population': 14240168,
      'area': 390757.0}]
 oblast = input(f"Jaky Vas zajima region?")
+region_found = 0
+
 for item in staty:
-    znamy = item["region"] == oblast
-    if znamy:
+    if item["region"] == oblast:
+        region_found = True
+    else:
+        region_found = False
+
+
+for item in staty:
+    if region_found:
         print(f"Staty v regionu jsou: {item['name']}")
-else:
-    print(f"Neznamy region")
+    else:
+        print(f"Neznamy region")
+        break
