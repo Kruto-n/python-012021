@@ -489,15 +489,13 @@ staty = [
     {'name': 'Zimbabwe', 'capital': 'Harare', 'region': 'Africa', 'subregion': 'Eastern Africa', 'population': 14240168,
      'area': 390757.0}]
 oblast = input(f"Jaky Vas zajima region?")
+regiony = {}
 for item in staty:
     znamy = item["region"] == oblast
     if znamy:
-        obyvatele = staty.copy()
-        obyvatele.pop("capital")
-        obyvatele.pop("region")
-        obyvatele.pop("subregion")
-        obyvatele.pop("area")
-        obyvatele.pop("gini")
-        print(obyvatele)
-else:
-    print(f"Neznamy region")
+        for key, value in regiony:
+            if item["subregion"] in regiony:
+                regiony[item["subregion"]] += item["population"]
+            else:
+                regiony[item["subregion"]] = item["population"]
+        print(f"Subregion: {item['subregion']} , population : {item['population']}")
