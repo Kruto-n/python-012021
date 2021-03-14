@@ -7,11 +7,11 @@ class Auto:
     def getInfo(self):
         return f"Auto ma registracni znacku {self.registracniznacka}, typ {self.typ}, najeto {self.kilometry}."
     def pujc_auto(self):
-        if self.dostupnost == True:
+        if self.dostupnost:
             self.dostupnost = False
-            print("Potvrzuji zapůjčení vozidla.")
+            return f"Potvrzuji zapůjčení vozidla."
         else:
-            print("Vozidlo není k dispozici.")
+            return f"Vozidlo není k dispozici."
 
 peugeot = Auto("4A2 3020", "Peugeot 403 Cabrio", "47534" )
 skoda = Auto("1P3 4747", "Škoda Octavia", "41253")
