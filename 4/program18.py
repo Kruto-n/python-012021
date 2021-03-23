@@ -26,9 +26,11 @@ class Uchazec(Kontakt):
             return f"Zapis je v poradku."
     def get_info(self):
         return f"Zapis je: {self.zapis_z_pohovoru}."
+
 nedele = Uchazec("Alena Alenova", "alenalena@alena.cz", "20. 3. 2021")
 streda = Uchazec("Klara Klarova", "klarovaklara@klara.com", "24. 3. 2021")
+
 #print(nedele.uloz_zapis("uchazec vhodny"))
 #print(nedele.get_info())
-#print(streda.uloz_zapis("uchazec vhodny"))
+#print(nedele.get_info())
 #print(streda.get_info())
