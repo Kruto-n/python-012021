@@ -14,11 +14,11 @@ class Kontakt:
     self.email = email
 
 class Uchazec(Kontakt):
-    def __init__(self, jmeno, email, datum_pohovoru):
+    def __init__(self, jmeno, email, datum_pohovoru, zapis_z_pohovoru = 0):
         super().__init__(jmeno, email)
         self.datum_pohovoru = datetime.strptime(datum_pohovoru, "%d. %m. %Y")
+        self.zapis_z_pohovoru = zapis_z_pohovoru
     def uloz_zapis(self, zapis_z_pohovoru):
-        zapis_z_pohovoru = 0
         if datetime.now() < self.datum_pohovoru:
             return f"Pohovor jeste neprobehl."
         else:
@@ -28,9 +28,9 @@ class Uchazec(Kontakt):
         return f"Zapis je: {self.zapis_z_pohovoru}."
 
 nedele = Uchazec("Alena Alenova", "alenalena@alena.cz", "20. 3. 2021")
-streda = Uchazec("Klara Klarova", "klarovaklara@klara.com", "24. 3. 2021")
+streda = Uchazec("Klara Klarova", "klarovaklara@klara.com", "24. 4. 2021")
 
-#print(nedele.uloz_zapis("uchazec vhodny"))
-#print(nedele.get_info())
-#print(nedele.get_info())
-#print(streda.get_info())
+print(nedele.uloz_zapis("uchazec vhodny"))
+print(nedele.get_info())
+print(nedele.get_info())
+print(streda.get_info())

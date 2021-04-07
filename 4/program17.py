@@ -41,8 +41,8 @@ class Uzivatel:
         self.uzivatelske_jmeno = uzivatelske_jmeno
         self.delka_sledovani = delka_sledovani
     def pripocti_zhlednuti(self):
-        delka_sledovani += delka
-        return f"Celkem sledovano {delka_sledovani} minut."
+        self.delka_sledovani += delka
+        return f"Celkem sledovano {self.delka_sledovani} minut."
 
 ratatouille = Film("Ratatouille", "komedie", 120)
 pratele = Serial("Pratele", "komedie", 236, 20)
