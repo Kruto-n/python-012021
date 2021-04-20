@@ -6,5 +6,5 @@ import matplotlib.pyplot as plt
 
 temperature = pandas.read_csv('temperature.csv')
 cities = temperature[temperature["City"].isin(["Miami Beach", "Helsinki", "Tokyo"])]
-cities.plot(kind='box', by="City")
+cities.boxplot(column = "AvgTemperature", by="City")
 plt.show()
